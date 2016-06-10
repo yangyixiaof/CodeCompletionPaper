@@ -1,0 +1,159 @@
+@misc{aerospikedocs,
+  author = {John Dillon},
+  title = {AeroSpike Documentation},
+  howpublished = {http://www.aerospike.com/docs/},
+  year = 2016,
+}
+
+@inproceedings{stolcke2011srilm,
+  title={SRILM at sixteen: Update and outlook},
+  author={Stolcke, Andreas and Zheng, Jing and Wang, Wen and Abrash, Victor},
+  booktitle={Proceedings of IEEE Automatic Speech Recognition and Understanding Workshop},
+  pages={5},
+  year={2011}
+}
+
+@inproceedings{wang2007topical,
+  title={Topical n-grams: Phrase and topic discovery, with an application to information retrieval},
+  author={Wang, Xuerui and McCallum, Andrew and Wei, Xing},
+  booktitle={Data Mining, 2007. ICDM 2007. Seventh IEEE International Conference on},
+  pages={697--702},
+  year={2007},
+  organization={IEEE}
+}
+
+@article{cavnar1994n,
+  title={N-gram-based text categorization},
+  author={Cavnar, William B and Trenkle, John M and others},
+  journal={Ann Arbor MI},
+  volume={48113},
+  number={2},
+  pages={161--175},
+  year={1994},
+  publisher={Citeseer}
+}
+
+@inproceedings{perelman2014test,
+  title={Test-driven synthesis},
+  author={Perelman, Daniel and Gulwani, Sumit and Grossman, Dan and Provost, Peter},
+  booktitle={ACM SIGPLAN Notices},
+  volume={49},
+  number={6},
+  pages={408--418},
+  year={2014},
+  organization={ACM}
+}
+
+@inproceedings{nguyen2013semfix,
+  title={SemFix: program repair via semantic analysis},
+  author={Nguyen, Hoang Duong Thien and Qi, Dawei and Roychoudhury, Abhik and Chandra, Satish},
+  booktitle={Proceedings of the 2013 International Conference on Software Engineering},
+  pages={772--781},
+  year={2013},
+  organization={IEEE Press}
+}
+
+@inproceedings{DBLP:conf/icse/WeimerNGF09,
+  author    = {Westley Weimer and
+               ThanhVu Nguyen and
+               Claire {Le Goues} and
+               Stephanie Forrest},
+  title     = {Automatically finding patches using genetic programming},
+  booktitle = {31st International Conference on Software Engineering, {ICSE} 2009,
+               May 16-24, 2009, Vancouver, Canada, Proceedings},
+  pages     = {364--374},
+  year      = {2009},
+  crossref  = {DBLP:conf/icse/2009},
+  url       = {http://dx.doi.org/10.1109/ICSE.2009.5070536},
+  doi       = {10.1109/ICSE.2009.5070536},
+  timestamp = {Mon, 10 Aug 2015 17:53:05 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/icse/WeimerNGF09},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+@inproceedings{DBLP:conf/icse/NguyenN15,
+  author    = {Anh Tuan Nguyen and
+               Tien N. Nguyen},
+  title     = {Graph-Based Statistical Language Model for Code},
+  booktitle = {37th {IEEE/ACM} International Conference on Software Engineering,
+               {ICSE} 2015, Florence, Italy, May 16-24, 2015, Volume 1},
+  pages     = {858--868},
+  year      = {2015},
+  crossref  = {DBLP:conf/icse/2015-1},
+  url       = {http://dx.doi.org/10.1109/ICSE.2015.336},
+  doi       = {10.1109/ICSE.2015.336},
+  timestamp = {Tue, 03 May 2016 15:49:23 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/icse/NguyenN15},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+@inproceedings{DBLP:conf/pldi/RaychevVY14,
+  author    = {Veselin Raychev and
+               Martin T. Vechev and
+               Eran Yahav},
+  title     = {Code completion with statistical language models},
+  booktitle = {{ACM} {SIGPLAN} Conference on Programming Language Design and Implementation,
+               {PLDI} '14, Edinburgh, United Kingdom - June 09 - 11, 2014},
+  pages     = {44},
+  year      = {2014},
+  crossref  = {DBLP:conf/pldi/2014},
+  url       = {http://doi.acm.org/10.1145/2594291.2594321},
+  doi       = {10.1145/2594291.2594321},
+  timestamp = {Sat, 10 May 2014 14:18:27 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/pldi/RaychevVY14},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+@inproceedings{DBLP:conf/sigsoft/NguyenNNN13,
+  author    = {Tung Thanh Nguyen and
+               Anh Tuan Nguyen and
+               Hoan Anh Nguyen and
+               Tien N. Nguyen},
+  title     = {A statistical semantic language model for source code},
+  booktitle = {Joint Meeting of the European Software Engineering Conference and
+               the {ACM} {SIGSOFT} Symposium on the Foundations of Software Engineering,
+               ESEC/FSE'13, Saint Petersburg, Russian Federation, August 18-26, 2013},
+  pages     = {532--542},
+  year      = {2013},
+  crossref  = {DBLP:conf/sigsoft/2013},
+  url       = {http://doi.acm.org/10.1145/2491411.2491458},
+  doi       = {10.1145/2491411.2491458},
+  timestamp = {Sat, 31 Aug 2013 17:43:06 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/sigsoft/NguyenNNN13},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+@inproceedings{DBLP:conf/icse/HindleBSGD12,
+  author    = {Abram Hindle and
+               Earl T. Barr and
+               Zhendong Su and
+               Mark Gabel and
+               Premkumar T. Devanbu},
+  title     = {On the naturalness of software},
+  booktitle = {34th International Conference on Software Engineering, {ICSE} 2012,
+               June 2-9, 2012, Zurich, Switzerland},
+  pages     = {837--847},
+  year      = {2012},
+  crossref  = {DBLP:conf/icse/2012},
+  url       = {http://dx.doi.org/10.1109/ICSE.2012.6227135},
+  doi       = {10.1109/ICSE.2012.6227135},
+  timestamp = {Tue, 03 May 2016 16:08:27 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/icse/HindleBSGD12},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+@inproceedings{DBLP:conf/msr/AllamanisS13a,
+  author    = {Miltiadis Allamanis and
+               Charles A. Sutton},
+  title     = {Mining source code repositories at massive scale using language modeling},
+  booktitle = {Proceedings of the 10th Working Conference on Mining Software Repositories,
+               {MSR} '13, San Francisco, CA, USA, May 18-19, 2013},
+  pages     = {207--216},
+  year      = {2013},
+  crossref  = {DBLP:conf/msr/2013},
+  url       = {http://dx.doi.org/10.1109/MSR.2013.6624029},
+  doi       = {10.1109/MSR.2013.6624029},
+  timestamp = {Wed, 03 Feb 2016 18:18:52 +0100},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/msr/AllamanisS13a},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}

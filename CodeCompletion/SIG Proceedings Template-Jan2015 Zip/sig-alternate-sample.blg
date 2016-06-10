@@ -1,0 +1,31 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: sig-alternate-sample.aux
+The style file: abbrv.bst
+Database file #1: sigproc.bib
+A bad cross reference---entry "DBLP:conf/icse/WeimerNGF09"
+refers to entry "DBLP:conf/icse/2009", which doesn't exist
+A bad cross reference---entry "DBLP:conf/icse/HindleBSGD12"
+refers to entry "DBLP:conf/icse/2012", which doesn't exist
+A bad cross reference---entry "DBLP:conf/msr/AllamanisS13a"
+refers to entry "DBLP:conf/msr/2013", which doesn't exist
+A bad cross reference---entry "DBLP:conf/sigsoft/NguyenNNN13"
+refers to entry "DBLP:conf/sigsoft/2013", which doesn't exist
+A bad cross reference---entry "DBLP:conf/icse/NguyenN15"
+refers to entry "DBLP:conf/icse/2015-1", which doesn't exist
+A bad cross reference---entry "DBLP:conf/pldi/RaychevVY14"
+refers to entry "DBLP:conf/pldi/2014", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/icse/2009"
+Warning--I didn't find a database entry for "DBLP:conf/icse/2015-1"
+Warning--I didn't find a database entry for "DBLP:conf/pldi/2014"
+Warning--I didn't find a database entry for "DBLP:conf/sigsoft/2013"
+Warning--I didn't find a database entry for "DBLP:conf/icse/2012"
+Warning--I didn't find a database entry for "DBLP:conf/msr/2013"
+Too many commas in name 1 of "Cormen, Thomas H. (EDT)/ Leiserson, Charles E./ Rivest, Ronald L./ Stein, Clifford" for entry introalgorithm
+while executing---line 1049 of file abbrv.bst
+Too many commas in name 1 of "Cormen, Thomas H. (EDT)/ Leiserson, Charles E./ Rivest, Ronald L./ Stein, Clifford" for entry introalgorithm
+while executing---line 1049 of file abbrv.bst
+Too many commas in name 1 of "Cormen, Thomas H. (EDT)/ Leiserson, Charles E./ Rivest, Ronald L./ Stein, Clifford" for entry introalgorithm
+while executing---line 1090 of file abbrv.bst
+Too many commas in name 1 of "Cormen, Thomas H. (EDT)/ Leiserson, Charles E./ Rivest, Ronald L./ Stein, Clifford" for entry introalgorithm
+while executing---line 1090 of file abbrv.bst
+Warning--can't use both volume and number fields in perelman2014test
+(There were 10 error messages)

@@ -1,0 +1,180 @@
+\begin{thebibliography}{10}
+
+\bibitem{DBLP:conf/msr/AllamanisS13a}
+M.~Allamanis and C.~A. Sutton.
+\newblock Mining source code repositories at massive scale using language
+  modeling.
+\newblock In {\em Proceedings of the 10th Working Conference on Mining Software
+  Repositories, {MSR} '13, San Francisco, CA, USA, May 18-19, 2013}, pages
+  207--216, 2013.
+
+\bibitem{cavnar1994n}
+W.~B. Cavnar, J.~M. Trenkle, et~al.
+\newblock N-gram-based text categorization.
+\newblock {\em Ann Arbor MI}, 48113(2):161--175, 1994.
+
+\bibitem{introalgorithm}
+C.~E. R. R. L. S.~C. Cormen, Thomas H. (EDT)/~Leiserson.
+\newblock {\em Introduction to Algorithms 3rd Edition}.
+\newblock Mit Press, LCS algorithm, 2009.
+
+\bibitem{eclipseplatform}
+I.~Corporation.
+\newblock Eclipse help platform.
+\newblock \url{http://help.eclipse.org/mars/index.jsp}, 1996.
+
+\bibitem{aerospikedocs}
+J.~Dillon.
+\newblock Aerospike documentation.
+\newblock \url{http://www.aerospike.com/docs/}, 2016.
+
+\bibitem{eclipseplugins}
+D.~R. Eric~Clayberg.
+\newblock {\em Eclipse Plug-ins (4th Edition)}.
+\newblock Addison-Wesley Professional, Introduction, 2012.
+
+\bibitem{DBLP:conf/icse/HindleBSGD12}
+A.~Hindle, E.~T. Barr, Z.~Su, M.~Gabel, and P.~T. Devanbu.
+\newblock On the naturalness of software.
+\newblock In {\em 34th International Conference on Software Engineering, {ICSE}
+  2012, June 2-9, 2012, Zurich, Switzerland}, pages 837--847, 2012.
+
+\bibitem{geneticalgorithm}
+M.~Melanie.
+\newblock An introduction to genetic algorithms.
+\newblock \url{www.boente.eti.br/fuzzy/ebook-fuzzy-mitchell.pdf}, 1996.
+
+\bibitem{DBLP:conf/icse/NguyenN15}
+A.~T. Nguyen and T.~N. Nguyen.
+\newblock Graph-based statistical language model for code.
+\newblock In {\em 37th {IEEE/ACM} International Conference on Software
+  Engineering, {ICSE} 2015, Florence, Italy, May 16-24, 2015, Volume 1}, pages
+  858--868, 2015.
+
+\bibitem{nguyen2013semfix}
+H.~D.~T. Nguyen, D.~Qi, A.~Roychoudhury, and S.~Chandra.
+\newblock Semfix: program repair via semantic analysis.
+\newblock In {\em Proceedings of the 2013 International Conference on Software
+  Engineering}, pages 772--781. IEEE Press, 2013.
+
+\bibitem{DBLP:conf/sigsoft/NguyenNNN13}
+T.~T. Nguyen, A.~T. Nguyen, H.~A. Nguyen, and T.~N. Nguyen.
+\newblock A statistical semantic language model for source code.
+\newblock In {\em Joint Meeting of the European Software Engineering Conference
+  and the {ACM} {SIGSOFT} Symposium on the Foundations of Software Engineering,
+  ESEC/FSE'13, Saint Petersburg, Russian Federation, August 18-26, 2013}, pages
+  532--542, 2013.
+
+\bibitem{antlr4}
+T.~Parr.
+\newblock Antlr4.
+\newblock \url{http://www.antlr.org/}, 2016.
+
+\bibitem{perelman2014test}
+D.~Perelman, S.~Gulwani, D.~Grossman, and P.~Provost.
+\newblock Test-driven synthesis.
+\newblock In {\em ACM SIGPLAN Notices}, volume~49, pages 408--418. ACM, 2014.
+
+\bibitem{DBLP:conf/pldi/RaychevVY14}
+V.~Raychev, M.~T. Vechev, and E.~Yahav.
+\newblock Code completion with statistical language models.
+\newblock In {\em {ACM} {SIGPLAN} Conference on Programming Language Design and
+  Implementation, {PLDI} '14, Edinburgh, United Kingdom - June 09 - 11, 2014},
+  page~44, 2014.
+
+\bibitem{stolcke2011srilm}
+A.~Stolcke, J.~Zheng, W.~Wang, and V.~Abrash.
+\newblock Srilm at sixteen: Update and outlook.
+\newblock In {\em Proceedings of IEEE Automatic Speech Recognition and
+  Understanding Workshop}, page~5, 2011.
+
+\bibitem{eclipseplugininstall}
+venukb.
+\newblock Eclipse plugin installation.
+\newblock
+  \url{http://www.venukb.com/2006/08/20/install-eclipse-plugins-the-easy-way/},
+  2006.
+
+\bibitem{wang2007topical}
+X.~Wang, A.~McCallum, and X.~Wei.
+\newblock Topical n-grams: Phrase and topic discovery, with an application to
+  information retrieval.
+\newblock In {\em Data Mining, 2007. ICDM 2007. Seventh IEEE International
+  Conference on}, pages 697--702. IEEE, 2007.
+
+\bibitem{DBLP:conf/icse/WeimerNGF09}
+W.~Weimer, T.~Nguyen, C.~{Le Goues}, and S.~Forrest.
+\newblock Automatically finding patches using genetic programming.
+\newblock In {\em 31st International Conference on Software Engineering, {ICSE}
+  2009, May 16-24, 2009, Vancouver, Canada, Proceedings}, pages 364--374, 2009.
+
+\bibitem{gitcrawler}
+Y.~Yang.
+\newblock The github crawler.
+\newblock
+  \url{https://github.com/yangyixiaof/gitcrawler/tree/master/gitcrawler}, 2016.
+
+\bibitem{irgrammar}
+Y.~Yang.
+\newblock Ir grammar.
+\newblock
+  \url{https://github.com/yangyixiaof/specialparse/blob/master/specialparse/src/main/java/cn/yyx/parse/szparse8java/Java8.g4},
+  2016.
+
+\bibitem{irparser}
+Y.~Yang.
+\newblock Ir parser.
+\newblock
+  \url{https://github.com/yangyixiaof/specialparse/tree/master/specialparse},
+  2016.
+
+\bibitem{ngramtrain}
+Y.~Yang.
+\newblock N-gram training script.
+\newblock
+  \url{https://github.com/yangyixiaof/gitcrawler/tree/master/programprocessor/ngram-train-scripts},
+  2016.
+
+\bibitem{ngramtraintutorial}
+Y.~Yang.
+\newblock N-gram training script tutorial.
+\newblock
+  \url{https://github.com/yangyixiaof/gitcrawler/blob/master/programprocessor/ngram-train-scripts/train-script-tutorial},
+  2016.
+
+\bibitem{programprocessor}
+Y.~Yang.
+\newblock Ppc program processor.
+\newblock
+  \url{https://github.com/yangyixiaof/gitcrawler/tree/master/programprocessor},
+  2016.
+
+\bibitem{programprocessortutorial}
+Y.~Yang.
+\newblock Ppc program processor tutorial.
+\newblock
+  \url{https://github.com/yangyixiaof/gitcrawler/blob/master/README.md}, 2016.
+
+\bibitem{modeltoaero}
+Y.~Yang.
+\newblock The program which puts the model into the aerospike database.
+\newblock
+  \url{https://github.com/yangyixiaof/ModelIntoAeroSpike/tree/master/PutModelIntoAeroSpike},
+  2016.
+
+\bibitem{modeltoaerotutorial}
+Y.~Yang.
+\newblock The tutorial of the program which puts the model into the aerospike
+  database.
+\newblock
+  \url{https://github.com/yangyixiaof/ModelIntoAeroSpike/blob/master/README.md},
+  2016.
+
+\bibitem{unzipscript}
+Y.~Yang.
+\newblock The unzip script.
+\newblock
+  \url{https://github.com/yangyixiaof/gitcrawler/tree/master/gitcrawler/UnzipScript},
+  2016.
+
+\end{thebibliography}
