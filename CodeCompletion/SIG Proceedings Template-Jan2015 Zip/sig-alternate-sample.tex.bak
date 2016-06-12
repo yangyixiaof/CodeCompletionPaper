@@ -277,24 +277,34 @@ PCC is implemented in Java. The total codes of PCC is 28555. The Antlr4\cite{ant
 
 \section{Empirical Results}
 
-By learning different projects from github, we found that if two projects deal with different areas, only a very small part is similar. Therefore, to simplify our experiments, we only choose projects deal with similar areas.
+By learning different projects from github, we found that if two projects deal with different areas, only a very small part is similar. Therefore, to simplify our experiments, we only choose projects which deal with similar areas.
 
 Due to the strong type checking of PCC, the project must import the necessary jar packages, otherwise wrong codes may be got. In order to reduce the workload of configuring the jar package in different projects, we choose the projects that do not require or require very little external jar packages.
 
-After screening by the two conditions just mentioned, 2187 java files are selected to do the experiments. Due the model is small, we put the model into memory.
+After screening by the two conditions just mentioned, 2187 java files are selected to do the experiments. Due the small size of the model, we put the model into memory.
 
+If the last five proposals returned by PCC contain the right answer, we think the completion is right. Remember that for proposals, the lower the position, the higher the priority.
 
+% what is case?
+We choose 10 different functions including lambda expressions in Java8. For each function, we randomly choose 10 positions. At each selected position, we invoke the content assistance. We compare the proposals returned by PPC with the actual statement following the position where we invoked the content assistance. The 100 test cases consist of these 100 positions.
+
+The experiments show that the accuracy is 98\%. Only two test cases are not passed. One failed test case is due to too many possible choices when inferring from 7-gram. Another is due to the failure of choosing the right variable from three variables which all pass the type checks.
+
+% how to do fuzzy testing?
+In order to evaluate the performance of the fuzzy matching algorithm, we randomly add and delete one or two statements of the context of the 100 test cases, compare the proposals returned by PPC with the actual statement.
+
+The experiments show that the accuracy is greater than or equal to 95\%. If we randomly add some statements to the context of the 100 test cases, there is no influence to the accuracy. However, if we randomly delete some statements of the context of the 100 test cases, the accuracy decrease to 95\%. The reason for the decline in the correct rate is that the genetic algorithm fails to infer some vital tokens in the process of producing the next generation.
 
 \section{Limitation and Future Work}
 
-PCC automatically writes the codes if the completion context is similar to some codes in the database. The computation of the similarity is mainly based on comparing the string contents of each token. If two programs are similar in logic but not similar in structure, PCC will take them as two different programs. What is more, if two programs are structurally similar, but their method names are totally different, PCC will fail to generate the right code either. When the model becomes more and more large, the genetic algorithm may fail to cover some vital tokens, which leads to the bad results. The future work will mainly focus on generating the logically similar codes.
+PCC automatically writes the codes if the completion context is similar to some codes in the database. The computation of the similarity is mainly based on comparing the string contents of each token. If two programs are similar in logic but not similar in structure, PCC will take them as two different programs. What is more, if two programs are structurally similar, but their method names are totally different, PCC will fail to generate the right code either. When the model becomes more and more large, the genetic algorithm may fail to infer some vital tokens, which leads to the bad results. The future work will mainly focus on generating the logically similar codes.
 
 \section{Conclusions}
 
 We present PCC, a plugin of eclipse IDE, to automatically complete the code when users are writing java codes in eclipse.
 PCC does not influence the existing functionality of eclipse.
 
-We make a careful analysis of the advantages and disadvantages of the existing work, put forward an IR in which one token represents one operation. Different name conventions of variables are translated into an unified IR form.
+We make a careful analysis of the advantages and disadvantages of the existing work, put forward an IR in which one token represents one operation. Different name conventions of variables are translated into an unified form.
 
 The fuzzy matching algorithm is applied to cope with possible changes in codes. The synthesizer involves runtime type-checking to ensure there is no compilation errors except some unresolved method invocations.
 
@@ -303,6 +313,8 @@ PCC is a real-time tool with quick responses. It is very suitable to train some 
 %ACKNOWLEDGMENTS are optional
 \section{Acknowledgments}
 Thanks Professor Song for reading this paper, and offering valuable advice. Thanks Han Liu for his objective points of view on the topic of this paper. Thank Shuhao Zhang for encouraging me to complete this long cycle of work.
+
+\newpage
 %
 % The following two commands are all you need in the
 % initial runs of your .tex file to
