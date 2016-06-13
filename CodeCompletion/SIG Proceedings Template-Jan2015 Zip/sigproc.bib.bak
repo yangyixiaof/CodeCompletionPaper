@@ -1,7 +1,9 @@
-@misc{irparser,
-  author = {Yixiao Yang},
-  title = {IR Parser},
-  howpublished = {\url{https://github.com/yangyixiaof/specialparse/tree/master/specialparse}},
+https://github.com/yangyixiaof/CodeCompletionPlugin/tree/master/cn.yyx.research.codecompleteplugin
+
+@misc{antlr4,
+  author = {Terence Parr},
+  title = {Antlr4},
+  howpublished = {\url{http://www.antlr.org/}},
   year = 2016,
 }
 

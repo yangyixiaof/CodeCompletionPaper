@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.15)  12 JUN 2016 11:55
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.15)  14 JUN 2016 02:45
 entering extended mode
 **D:/ResearchWorkSpace/Code*Completion/CodeCompletion/SIG*Proceedings*Template-
 Jan2015*Zip/sig-alternate-sample.tex
@@ -383,108 +383,100 @@ LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <9> not available
 
 
 ]
-<pics/architecture.png, id=19, 694.9965pt x 476.982pt>
+<pics/architecture.png, id=12, 694.9965pt x 476.982pt>
 File: pics/architecture.png Graphic file (type png)
 
 <use pics/architecture.png>
-Package pdftex.def Info: pics/architecture.png used on input line 121.
+Package pdftex.def Info: pics/architecture.png used on input line 111.
 (pdftex.def)             Requested size: 241.91785pt x 166.02914pt.
 
-Overfull \hbox (1.91785pt too wide) in paragraph at lines 121--121
+Overfull \hbox (1.91785pt too wide) in paragraph at lines 111--111
  [][] 
  []
 
-<pics/toIR1.png, id=21, 248.72925pt x 63.8385pt>
+<pics/toIR1.png, id=14, 248.72925pt x 63.8385pt>
 File: pics/toIR1.png Graphic file (type png)
  <use pics/toIR1.png>
-Package pdftex.def Info: pics/toIR1.png used on input line 137.
+Package pdftex.def Info: pics/toIR1.png used on input line 120.
 (pdftex.def)             Requested size: 151.20154pt x 38.80797pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--151
-
- []
-
-<pics/variableIR.png, id=22, 564.30824pt x 169.23225pt>
+<pics/variableIR.png, id=15, 564.30824pt x 169.23225pt>
 File: pics/variableIR.png Graphic file (type png)
 
 <use pics/variableIR.png>
-Package pdftex.def Info: pics/variableIR.png used on input line 156.
+Package pdftex.def Info: pics/variableIR.png used on input line 145.
 (pdftex.def)             Requested size: 201.59692pt x 60.45616pt.
 
-<pics/moreexamplesIR.png, id=23, 681.14474pt x 441.44925pt>
+<pics/moreexamplesIR.png, id=16, 681.14474pt x 441.44925pt>
 File: pics/moreexamplesIR.png Graphic file (type png)
 
 <use pics/moreexamplesIR.png>
-Package pdftex.def Info: pics/moreexamplesIR.png used on input line 165.
+Package pdftex.def Info: pics/moreexamplesIR.png used on input line 153.
 (pdftex.def)             Requested size: 241.91785pt x 156.7863pt.
 
-Overfull \hbox (1.91785pt too wide) in paragraph at lines 165--165
+Overfull \hbox (1.91785pt too wide) in paragraph at lines 153--153
  [][] 
  []
 
-[2 <D:/ResearchWorkSpace/Code Completion/CodeCompletion/SIG Proceedings Templat
-e-Jan2015 Zip/pics/architecture.png> <D:/ResearchWorkSpace/Code Completion/Code
-Completion/SIG Proceedings Template-Jan2015 Zip/pics/toIR1.png> <D:/ResearchWor
-kSpace/Code Completion/CodeCompletion/SIG Proceedings Template-Jan2015 Zip/pics
-/variableIR.png> <D:/ResearchWorkSpace/Code Completion/CodeCompletion/SIG Proce
-edings Template-Jan2015 Zip/pics/moreexamplesIR.png>]
-<pics/preferencesetting.png, id=31, 432.4155pt x 113.223pt>
-File: pics/preferencesetting.png Graphic file (type png)
-
-<use pics/preferencesetting.png>
-Package pdftex.def Info: pics/preferencesetting.png used on input line 202.
-(pdftex.def)             Requested size: 241.91785pt x 63.34396pt.
-
-Overfull \hbox (1.91785pt too wide) in paragraph at lines 202--202
- [][] 
- []
-
-<pics/codecomprunexample.png, id=32, 335.45325pt x 334.851pt>
-File: pics/codecomprunexample.png Graphic file (type png)
-
-<use pics/codecomprunexample.png>
-Package pdftex.def Info: pics/codecomprunexample.png used on input line 212.
-(pdftex.def)             Requested size: 211.67908pt x 211.30467pt.
-
-<pics/fuzzymatchshow.png, id=33, 565.51276pt x 264.99pt>
+<pics/fuzzymatchshow.png, id=17, 565.51276pt x 264.99pt>
 File: pics/fuzzymatchshow.png Graphic file (type png)
 
 <use pics/fuzzymatchshow.png>
-Package pdftex.def Info: pics/fuzzymatchshow.png used on input line 226.
-(pdftex.def)             Requested size: 241.91785pt x 113.35718pt.
-
-Overfull \hbox (1.91785pt too wide) in paragraph at lines 226--226
- [][] 
- []
-
-
-Overfull \hbox (1.15039pt too wide) in paragraph at lines 230--231
-\T1/aer/m/n/9 sub-se-quence be-tween the t-wo new-ly gen-er-at-ed se-quences:AB
-,
- []
-
-[3 <D:/ResearchWorkSpace/Code Completion/CodeCompletion/SIG Proceedings Templat
-e-Jan2015 Zip/pics/preferencesetting.png> <D:/ResearchWorkSpace/Code Completion
-/CodeCompletion/SIG Proceedings Template-Jan2015 Zip/pics/codecomprunexample.pn
-g> <D:/ResearchWorkSpace/Code Completion/CodeCompletion/SIG Proceedings Templat
-e-Jan2015 Zip/pics/fuzzymatchshow.png>]
-Overfull \hbox (9.0pt too wide) detected at line 270
+Package pdftex.def Info: pics/fuzzymatchshow.png used on input line 189.
+(pdftex.def)             Requested size: 211.67908pt x 99.18904pt.
+ [2 <D:/ResearchWorkSpace/Code Completion/CodeCompletion/SIG Proceedings Templa
+te-Jan2015 Zip/pics/architecture.png> <D:/ResearchWorkSpace/Code Completion/Cod
+eCompletion/SIG Proceedings Template-Jan2015 Zip/pics/toIR1.png> <D:/ResearchWo
+rkSpace/Code Completion/CodeCompletion/SIG Proceedings Template-Jan2015 Zip/pic
+s/variableIR.png> <D:/ResearchWorkSpace/Code Completion/CodeCompletion/SIG Proc
+eedings Template-Jan2015 Zip/pics/moreexamplesIR.png>]
+Overfull \hbox (9.0pt too wide) detected at line 230
 [][] 
  []
 
-[4]
+<pics/synthesizeexample.png, id=32, 444.4605pt x 160.1985pt>
+File: pics/synthesizeexample.png Graphic file (type png)
+
+<use pics/synthesizeexample.png>
+Package pdftex.def Info: pics/synthesizeexample.png used on input line 235.
+(pdftex.def)             Requested size: 201.59692pt x 72.66309pt.
+ [3 <D:/ResearchWorkSpace/Code Completion/CodeCompletion/SIG Proceedings Templa
+te-Jan2015 Zip/pics/fuzzymatchshow.png> <D:/ResearchWorkSpace/Code Completion/C
+odeCompletion/SIG Proceedings Template-Jan2015 Zip/pics/synthesizeexample.png>]
+
+<pics/preferencesetting.png, id=38, 432.4155pt x 113.223pt>
+File: pics/preferencesetting.png Graphic file (type png)
+
+<use pics/preferencesetting.png>
+Package pdftex.def Info: pics/preferencesetting.png used on input line 259.
+(pdftex.def)             Requested size: 241.91785pt x 63.34396pt.
+
+Overfull \hbox (1.91785pt too wide) in paragraph at lines 259--259
+ [][] 
+ []
+
+<pics/codecomprunexample.png, id=39, 335.45325pt x 334.851pt>
+File: pics/codecomprunexample.png Graphic file (type png)
+
+<use pics/codecomprunexample.png>
+Package pdftex.def Info: pics/codecomprunexample.png used on input line 266.
+(pdftex.def)             Requested size: 211.67908pt x 211.30467pt.
+ [4 <D:/ResearchWorkSpace/Code Completion/CodeCompletion/SIG Proceedings Templa
+te-Jan2015 Zip/pics/preferencesetting.png> <D:/ResearchWorkSpace/Code Completio
+n/CodeCompletion/SIG Proceedings Template-Jan2015 Zip/pics/codecomprunexample.p
+ng>]
 ("D:\ResearchWorkSpace\Code Completion\CodeCompletion\SIG Proceedings Template-
 Jan2015 Zip\sig-alternate-sample.bbl") [5]
 ("D:\ResearchWorkSpace\Code Completion\CodeCompletion\SIG Proceedings Template-
 Jan2015 Zip\sig-alternate-sample.aux") ) 
 Here is how much of TeX's memory you used:
- 5515 strings out of 495354
- 71444 string characters out of 3183859
- 159159 words of memory out of 3000000
- 8574 multiletter control sequences out of 15000+200000
- 47927 words of font info for 67 fonts, out of 3000000 for 9000
+ 5526 strings out of 495354
+ 71645 string characters out of 3183859
+ 159171 words of memory out of 3000000
+ 8581 multiletter control sequences out of 15000+200000
+ 50080 words of font info for 70 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 41i,11n,34p,904b,600s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,11n,34p,1136b,600s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/CTEX/MiKTeX/fonts/enc/dvips/fontnam
 e/8r.enc}<D:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/CTEX/MiKT
 eX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><D:/CTEX/MiKTeX/fonts/type1/pu
@@ -497,9 +489,9 @@ ublic/amsfonts/cm/cmsy6.pfb><D:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy
 9.pfb><D:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><D:/CTEX/MiKTeX/
 fonts/type1/urw/helvetic/uhvb8a.pfb><D:/CTEX/MiKTeX/fonts/type1/urw/helvetic/uh
 vr8a.pfb><D:/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb>
-Output written on sig-alternate-sample.pdf (5 pages, 428525 bytes).
+Output written on sig-alternate-sample.pdf (5 pages, 476283 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
+ 94 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

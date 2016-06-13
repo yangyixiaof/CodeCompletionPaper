@@ -108,6 +108,13 @@ W.~Weimer, T.~Nguyen, C.~{Le Goues}, and S.~Forrest.
 \newblock In {\em 31st International Conference on Software Engineering, {ICSE}
   2009, May 16-24, 2009, Vancouver, Canada, Proceedings}, pages 364--374, 2009.
 
+\bibitem{pccsource}
+Y.~Yang.
+\newblock Codecompletion.
+\newblock
+  \url{https://github.com/yangyixiaof/CodeCompletionPlugin/tree/master/cn.yyx.research.codecompleteplugin},
+  2016.
+
 \bibitem{gitcrawler}
 Y.~Yang.
 \newblock The github crawler.
