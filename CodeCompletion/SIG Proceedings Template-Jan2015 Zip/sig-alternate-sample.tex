@@ -57,9 +57,10 @@ We present PCC\footnote{Hhhaha}, a plugin of eclipse IDE which analyzes the code
 
 PCC is an intelligent code writer which synthesizes a whole statement which may include all syntax elements of Java in real time. PCC takes the context of currently being edited Java file into consideration and ensures that there are no compilation errors in the generated code.
 
-The correctness of the completed code is 95\% among 100 test cases. The time cost of 80\% of the completion process is less than 2 seconds, which is effective and user-friendly. In the worst case, the time cost is still less than 4 seconds. To best of our knowledge, it is the first time to apply fuzzy matching algorithm to match and predict the code patterns on the statistical language model. It is also the first time to make a practical tool to automatically write the code with no compilation errors.
+The correctness of the completed codes is 95\% among 100 test cases. The time cost of 80\% of the completion processes is less than 2 seconds, which is effective and user-friendly. In the worst case, the time cost is still less than 4 seconds. To best of our knowledge, it is the first time to apply fuzzy matching algorithm to match and predict the code patterns on the statistical language model. It is also the first time to make a practical tool to automatically predict and write the code with no compilation errors.
 \end{abstract}
 
+\vspace{-0.1cm}
 \begin{CCSXML}
 <ccs2012>
 <concept>
@@ -84,7 +85,7 @@ PCC synthesizes codes based on patterns which is different from Test Driven Synt
 
 To narrow the whole possible search space, applying machine learning algorithms to big-code to learn how to write codes has become an effective method.
 
-We apply n-gram model to train the source codes of Java. We predict the codes which are of highest probabilities based on the trained n-gram model.
+We apply the n-gram model to train the source codes of Java. We find the similar contexts first, predict and synthesize the codes which are of highest probabilities based on the trained n-gram model and the contexts just found.
 
 %Because the improvements brought by different n-gram algorithms are small, PCC uses the basic n-gram model.
 %and the fuzzy matching with precise synthesis is the vital concern,
@@ -96,7 +97,7 @@ We apply n-gram model to train the source codes of Java. We predict the codes wh
 
 The first one to apply natural language processing algorithms to source codes was Hindle \cite{DBLP:conf/icse/HindleBSGD12}, he used the n-gram \cite{cavnar1994n} model to train the source codes of Java. The next work was done by Allamanis \cite{DBLP:conf/msr/AllamanisS13a}, he trained 100 times larger model than Hindle and made a topic visualization tool to show the frequently used codes of the software. Nguyen \cite{DBLP:conf/sigsoft/NguyenNNN13} refined the tokens, used the n-gram topic \cite{wang2007topical} model, performed the experiments similarly. Nguyen \cite{DBLP:conf/icse/NguyenN15}, Raychev \cite{DBLP:conf/pldi/RaychevVY14} used the statistical language model to do researches on API usages. The work of Raychev can predict the API, but more generic codes such as if-block, for-block, variable-declaration and so on can not be predicted. The other works can hardly predict and synthesize the codes which can actually be used.
 
-The reason is that their models are too scattered. For example, ``String str=a.toString()'' will be split into 8 tokens: String$\#$str$\#$=$\#$a$\#$.$\#$toString$\#$($\#$). Every word split by $\#$ is a token. If a 5-gram model is available, when inferring the next token from the above example, what will be inferred? Now the longest context is the last 4 tokens: .\#toString\#(\#). Even with the longest context, any token behind statements such as ``String str=a.toString()'', ``String any=anything.toString()'', ``print(sth.toString())'' and so on will show up. Information before ``.toString()'' is lost. According to our experiments, if the model is large, about 100 different tokens with similar probabilities will be obtained. Choice has become a problem. What is more, different people have their own name conventions. Some people like to declare variable like this: ``String ssssss1 = a.toString()''.
+The reason is that their models are too scattered. For example, ``String str=a.toString()'' will be split into 8 tokens: $String\#str\#=\#a\#.\#toString\#(\#)$. Every word split by $\#$ is a token. If a 5-gram model is available, when inferring the next token from the above example, what will be inferred? Now the longest context is the last 4 tokens: $.\#toString\#(\#)$. Even with the longest context, any token behind statements such as ``String str=a.toString()'', ``String any=anything.toString()'', ``print(sth.toString())'' and so on will show up. Information before ``.toString()'' is lost. According to our experiments, if the model is large, about 100 different tokens with similar probabilities will be obtained. Choice has become a problem. What is more, different people have their own name conventions. Some people like to declare variable like this: ``String ssssss1 = a.toString()''.
 
 The model cannot be compact either. Due to the database being searched by the exact key, if taking the statement ``String str=a.toString()'' as one token, nothing will be inferred from the statement ``String str=b.toString()'' although there is only one character different between two tokens.
 
@@ -109,7 +110,7 @@ Figure \ref{architecture} shows the architecture and the execution flow of PCC.
 \\\begin{figure}[htbp]
   \centering
   \includegraphics[width=0.48\textwidth]{pics/architecture.png}\\
-  \caption{PCC architecture}\label{architecture}
+  \caption{PCC Architecture}\label{architecture}
 \end{figure}
 
 Source Code Repository contains Java source files crawled from github and other websites. Program Processor translates Java source files to IR. IR is a special form which meets the condition: one operation one token. The basic idea is that if a statement is too long, we split it into several tokens. IR is carefully designed to ensure that these separated tokens can be rebuilt to the original statement. Variable names are eliminated in IR. Due to one token contains only one operation, it is easy for IR to do sequence fuzzy matching. As discussed in Related Work, IR cannot be too scattered nor too compact. After trying for 2 months, a suitable kind of IR was finally found.
@@ -119,7 +120,7 @@ Source Code Repository contains Java source files crawled from github and other 
   % Requires \usepackage{graphicx}
   \includegraphics[width=0.3\textwidth]{pics/toIR1.png}\\
   \vspace{-0.15cm}
-  \caption{Simple translation to IR}\label{toIR1}
+  \caption{Simple Translation to IR}\label{toIR1}
 \end{figure}
 
 Firgure \ref{toIR1} gives a concrete idea about the translation and the IR. VD@ means a type declared. VH@ means a variable declared.
@@ -152,7 +153,7 @@ tool is told to train 3-gram models, the 2-gram model and 1-gram model will also
   % Requires \usepackage{graphicx}
   \includegraphics[width=0.48\textwidth]{pics/moreexamplesIR.png}\\
   \vspace{-0.1cm}
-  \caption{More examples to IR}\label{moretoIR}
+  \caption{More Examples to IR}\label{moretoIR}
 \end{figure}
 
 In order to preserve the information as much as possible, the 8-gram model is trained.
@@ -259,7 +260,7 @@ When everything is ready, the only thing to do is to press the hot key of conten
   % Requires \usepackage{graphicx}
   \includegraphics[width=0.48\textwidth]{pics/preferencesetting.png}\\
   \vspace{-0.2cm}
-  \caption{GUI of IP preference setting}\label{GUIpreference}
+  \caption{GUI of IP Preference Setting}\label{GUIpreference}
 \end{figure}
 \vspace{-0.5cm}
 \\\begin{figure}[htbp]
