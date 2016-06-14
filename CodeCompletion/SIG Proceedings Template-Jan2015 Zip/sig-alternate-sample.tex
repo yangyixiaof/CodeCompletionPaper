@@ -74,6 +74,7 @@ The correctness of the completed code is 95\% among 100 test cases. The time cos
 
 \vspace{-0.1cm}
 \keywords{Code Completion, Code Prediction, Synthesis, Automatically Code Writing, Statistical Language Modelling}
+\vspace{-0.1cm}
 
 \section{Introduction}
 
@@ -93,11 +94,9 @@ We apply n-gram model to train the source codes of Java. We predict the codes wh
 \vspace{-0.2cm}
 \section{Related Work}
 
-The first one to apply natural language processing algorithms to source codes was Hindle \cite{DBLP:conf/icse/HindleBSGD12}, he used the n-gram \cite{cavnar1994n} model to train the source codes of Java. The next work was done by Allamanis \cite{DBLP:conf/msr/AllamanisS13a}, he trained 100 times larger model than Hindle and made a topic visualization tool to show the frequently used codes of the software. Nguyen \cite{DBLP:conf/sigsoft/NguyenNNN13} refined the tokens, used the n-gram topic \cite{wang2007topical} model, performed the experiments similarly. Nguyen \cite{DBLP:conf/icse/NguyenN15}, Raychev and Vechev \cite{DBLP:conf/pldi/RaychevVY14} used the statistical language model to do the theoretical research on API usages.
+The first one to apply natural language processing algorithms to source codes was Hindle \cite{DBLP:conf/icse/HindleBSGD12}, he used the n-gram \cite{cavnar1994n} model to train the source codes of Java. The next work was done by Allamanis \cite{DBLP:conf/msr/AllamanisS13a}, he trained 100 times larger model than Hindle and made a topic visualization tool to show the frequently used codes of the software. Nguyen \cite{DBLP:conf/sigsoft/NguyenNNN13} refined the tokens, used the n-gram topic \cite{wang2007topical} model, performed the experiments similarly. Nguyen \cite{DBLP:conf/icse/NguyenN15}, Raychev \cite{DBLP:conf/pldi/RaychevVY14} used the statistical language model to do researches on API usages. The work of Raychev can predict the API, but more generic codes such as if-block, for-block, variable-declaration and so on can not be predicted. The other works can hardly predict and synthesize the codes which can actually be used.
 
-The previous works can hardly predict and synthesize the codes which can actually be used. The reason is that their models are too scattered.
-
-For example, ``String str=a.toString()'' will be split into 8 tokens: String$\#$str$\#$=$\#$a$\#$.$\#$toString$\#$($\#$). Every word split by $\#$ is a token. If a 5-gram model is available, when inferring the next token from the above example, what will be inferred? Now the longest context is the last 4 tokens: .\#toString\#(\#). Even with the longest context, any token behind statements such as ``String str=a.toString()'', ``String any=anything.toString()'', ``print(sth.toString())'' and so on will show up. Information before ``.toString()'' is lost. According to our experiments, if the model is large, about 100 different tokens with similar probabilities will be obtained. Choosing the next token has become a problem. What is more, different people have their own name conventions. Some people like to declare variable like this: ``String ssssss1 = a.toString()''.
+The reason is that their models are too scattered. For example, ``String str=a.toString()'' will be split into 8 tokens: String$\#$str$\#$=$\#$a$\#$.$\#$toString$\#$($\#$). Every word split by $\#$ is a token. If a 5-gram model is available, when inferring the next token from the above example, what will be inferred? Now the longest context is the last 4 tokens: .\#toString\#(\#). Even with the longest context, any token behind statements such as ``String str=a.toString()'', ``String any=anything.toString()'', ``print(sth.toString())'' and so on will show up. Information before ``.toString()'' is lost. According to our experiments, if the model is large, about 100 different tokens with similar probabilities will be obtained. Choice has become a problem. What is more, different people have their own name conventions. Some people like to declare variable like this: ``String ssssss1 = a.toString()''.
 
 The model cannot be compact either. Due to the database being searched by the exact key, if taking the statement ``String str=a.toString()'' as one token, nothing will be inferred from the statement ``String str=b.toString()'' although there is only one character different between two tokens.
 
@@ -178,10 +177,11 @@ After training, given a sequence of tokens $s_1...s_{n-1}$ and an available n-gr
 $NP(s_{next}) = P(s_{next}|s_1...s_{n-1}) * F(s_1...s_{n-1})$
 
 $F(s_1...s_{n-1}) = \prod_{m=1}^{n-1}P(s_m|s_{m-1}...s_{m-(n-1)})$
+\vspace{-0.1cm}
 
 \section{Fuzzy Matcher}
 
-In most cases, The codes mined are not exactly same as the codes written by users. The fuzzy matching algorithm is combined with the genetic algorithm \cite{geneticalgorithm} and the longest common subsequence LCS algorithm \cite{introalgorithm}.
+In most cases, The codes mined are not exactly same as the codes written by users. That is why the fuzzy matching algorithm is needed here. The fuzzy matching algorithm is combined with the genetic algorithm \cite{geneticalgorithm} and the longest common subsequence LCS algorithm \cite{introalgorithm}.
 
 Figure \ref{fuzzymatch} gives a concrete idea about how this algorithm is running. For the sake of simplicity, the complex IR tokens are replaced by the English alphabets.
 \begin{figure}[htbp]
@@ -258,6 +258,7 @@ When everything is ready, the only thing to do is to press the hot key of conten
   \centering
   % Requires \usepackage{graphicx}
   \includegraphics[width=0.48\textwidth]{pics/preferencesetting.png}\\
+  \vspace{-0.2cm}
   \caption{GUI of IP preference setting}\label{GUIpreference}
 \end{figure}
 \vspace{-0.5cm}
@@ -265,6 +266,7 @@ When everything is ready, the only thing to do is to press the hot key of conten
   \centering
   % Requires \usepackage{graphicx}
   \includegraphics[width=0.42\textwidth]{pics/codecomprunexample.png}\\
+  \vspace{-0.2cm}
   \caption{Running Screen Shot}\label{codecomprunexample}
 \end{figure}
 \vspace{-0.1cm}
