@@ -4,6 +4,7 @@
 \makeatother
 
 \usepackage[ruled]{algorithm2e}
+\usepackage{amssymb}
 \usepackage{algorithmic}
 \usepackage{listings}
 \usepackage{stmaryrd}
@@ -104,7 +105,7 @@ Therefore, we propose a novel code completion tool. An intermediate representati
 
 \section{Architecture}
 
-Figure \ref{architecture} shows the architecture and the execution flow of the tool.
+Figure \ref{architecture} shows the architecture and the execution flow of PCC.
 \vspace{-0.25cm}
 \\\begin{figure}[htbp]
   \centering
@@ -170,7 +171,7 @@ Every synthesizer runs in a separated thread. The Collector will collect all the
 The training process computes and stores all the conditional probabilities:
 
 $P(s_m|s_{m-1}...s_{m-(n-1)}) = \frac{c(s_m...s_{m-(n-1)})}{c(s_{m-1}...s_{m-(n-1)})}$
-\\where c($\cdot$) is the count of the given sequence of tokens, $s_i$ represents the token.
+\\where c($\cdot$) is the count of the given sequence of tokens, $s_i$ represents the token, $m \in \mathbb{Z}$ .
 
 After training, given a sequence of tokens $s_1...s_{n-1}$ and an available n-gram model, the probability of next token is:
 
@@ -180,7 +181,7 @@ $F(s_1...s_{n-1}) = \prod_{m=1}^{n-1}P(s_m|s_{m-1}...s_{m-(n-1)})$
 
 \section{Fuzzy Matcher}
 
-The fuzzy matching algorithm is combined with the genetic algorithm \cite{geneticalgorithm} and the longest common subsequence LCS algorithm \cite{introalgorithm}.
+In most cases, The codes mined are not exactly same as the codes written by users. The fuzzy matching algorithm is combined with the genetic algorithm \cite{geneticalgorithm} and the longest common subsequence LCS algorithm \cite{introalgorithm}.
 
 Figure \ref{fuzzymatch} gives a concrete idea about how this algorithm is running. For the sake of simplicity, the complex IR tokens are replaced by the English alphabets.
 \begin{figure}[htbp]
@@ -189,20 +190,20 @@ Figure \ref{fuzzymatch} gives a concrete idea about how this algorithm is runnin
   \includegraphics[width=0.42\textwidth]{pics/fuzzymatchshow.png}\\
   \caption{Fuzzy Matching Algorithm}\label{fuzzymatch}
 \end{figure}
-\vspace{-0.5cm}
+\vspace{-0.25cm}
 
-Assume that the already written codes are A, C, F, G, and K. The fuzzy algorithm starts at A, infers the next generation of A based on 2-gram model, chooses two tokens with the highest probabilities computed by $P(token|A)$. Assume that the values of P(B|A) and P(C|A) are largest. So B and C are inferred. The longest common subsequences between the two newly generated sequences: AB, AC and the already written codes: ACFGK are computed. Then, the fuzzy algorithm does the similar things to each token of the new generation: B, C, but this time, 3-gram model is used because the length of the context is 2. Assume that the values of $P(F|AB), P(T|AB), P(Y|AC)$ and $P(L|AC)$ are largest, so, in the next generation, F, T, Y, and L are inferred. The corresponding longest common sequences are recalculated. Keep doing the algorithm until the length of the newly generated sequence is more than the length of the already written codes. In realization, 4 to 8 tokens will be inferred from a single sequence instead of 2.
+Assume that the already written codes are A, C, F, G, and K. The fuzzy algorithm starts at A, infers the next generation of A based on 2-gram model, chooses two tokens with the highest probabilities computed by $P(token|A)$. Assume that the values of P(B|A) and P(C|A) are largest. So B and C are inferred. The longest common subsequences between the two newly generated sequences: AB, AC and the already written codes: ACFGK are computed. Then, the fuzzy algorithm does the similar things to each token of the new generation: B, C, but this time, 3-gram model is used because the length of the context is 2. Assume that the values of $P(F|AB), P(T|AB), P(Y|AC)$ and $P(L|AC)$ are largest, so, in the next generation, F, T, Y, and L are inferred. The corresponding longest common sequences are recalculated. Keep doing the algorithm until the length of the newly generated sequence is more than the length of the already written codes. In realization, 4 to 8 tokens will be inferred from a single sequence instead of 2. Through the selection of the most likely next generation, the overall search space has been reduced.
 
 The most similar sequences will be retained which are the sequences with orange nodes on its path in Figure \ref{fuzzymatch}.
 %In a lot of projects in the same field, codes are similar but not exactly same.
 
 \section{Precise Synthesizer}
 
-PCC puts every sequence returned by the Fuzzy Matcher to an unique Precise Synthesizer. Based on the given sequence, the Precise Synthesizer keeps inferring and synthesizing the next token until the the sequence of tokens can form a statement.
+PCC puts every sequence returned by the Fuzzy Matcher to an unique Precise Synthesizer. Based on the given sequence, the Precise Synthesizer keeps using the 8-gram model to infer and synthesize the next token until the the sequence of tokens can form a statement.
 
-%The function $InferTokens$ is used to infer the next tokens from the given sequence. 
+%The function $InferTokens$ is used to infer the next tokens from the given sequence.
 
-Algorithm \ref{algorsyn} shows the framework of the synthesizer. The function $SynthesizeCode$ is a recursive function which is based on depth-first search. $SynthesizeCode$ has a parameter which represents the current sequence of tokens. The function $FindBound$ finds the tokens which are a whole. For example, given the IR tokens: $mi()\quad @PE\&\&p()$, the bound of token: $@PE\&\&p()$ is $mi()$ because $mi()\&\&p()$ is a whole. The function $Synthesize$ keeps merging the last two tokens from the second argument back to the first argument, and involves the type checking to ensure that there are no compilation errors. If the first argument is null, the tokens from the newly inferred token back to the start of the sequence will all be merged. Figure \ref{synthesizerexample} gives a concrete idea about the whole process.
+Algorithm \ref{algorsyn} shows the framework of the synthesizer. The function $SynthesizeCode$ is a recursive function which is based on depth-first search. $SynthesizeCode$ has a parameter which represents the current sequence of tokens. The function $FindBound$ finds the tokens which are a whole. For example, given the IR tokens: $mi()\quad @PE\&\&C0?0$, the bound of token: $@PE\&\&C0?0$ is $mi()$ because $mi()\&\&C0?0$ is a whole. The function $Synthesize$ keeps merging the last two tokens from the second argument back to the first argument, and involves the type checking to ensure that there are no compilation errors. If the first argument is null, the tokens from the newly inferred token back to the start of the sequence will all be merged. Figure \ref{synthesizerexample} gives a concrete idea about synthesizing one sequence.
 
 The internal code completion in eclipse could infer the specifications based on literals. This functionality is integrated into PCC. For example, the internal code completion could translate $String$ to $java.lang.String$ or translate $a.subStr$ to $a.substring(int\ beginIndex)$.
 

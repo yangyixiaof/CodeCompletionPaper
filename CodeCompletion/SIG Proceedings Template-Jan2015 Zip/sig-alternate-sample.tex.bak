@@ -186,7 +186,7 @@ Figure \ref{fuzzymatch} gives a concrete idea about how this algorithm is runnin
 \begin{figure}[htbp]
   \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[width=0.48\textwidth]{pics/fuzzymatchshow.png}\\
+  \includegraphics[width=0.42\textwidth]{pics/fuzzymatchshow.png}\\
   \caption{Fuzzy Matching Algorithm}\label{fuzzymatch}
 \end{figure}
 \vspace{-0.5cm}
@@ -200,9 +200,9 @@ The most similar sequences will be retained which are the sequences with orange 
 
 PCC puts every sequence returned by the Fuzzy Matcher to an unique Precise Synthesizer. Based on the given sequence, the Precise Synthesizer keeps inferring and synthesizing the next token until the the sequence of tokens can form a statement.
 
-%The function $InferTokens$ is used to infer the next tokens from the given sequence. 
+%The function $InferTokens$ is used to infer the next tokens from the given sequence.
 
-Algorithm \ref{algorsyn} shows the framework of the synthesizer. The function $SynthesizeCode$ is a recursive function which is based on depth-first search. $SynthesizeCode$ has a parameter which represents the current sequence of tokens. The function $FindBound$ finds the tokens which are a whole. For example, given the IR tokens: $mi()\quad @PE\&\&p()$, the bound of token: $@PE\&\&p()$ is $mi()$ because $mi()\&\&p()$ is a whole. The function $Synthesize$ keeps merging the last two tokens from the second argument back to the first argument, and involves the type checking to ensure that there are no compilation errors. If the first argument is null, the tokens from the newly inferred token back to the start of the sequence will all be merged. Figure \ref{synthesizerexample} gives a concrete idea about the whole process.
+Algorithm \ref{algorsyn} shows the framework of the synthesizer. The function $SynthesizeCode$ is a recursive function which is based on depth-first search. $SynthesizeCode$ has a parameter which represents the current sequence of tokens. The function $FindBound$ finds the tokens which are a whole. For example, given the IR tokens: $mi()\quad @PE\&\&C0?0$, the bound of token: $@PE\&\&p()$ is $mi()$ because $mi()\&\&p()$ is a whole. The function $Synthesize$ keeps merging the last two tokens from the second argument back to the first argument, and involves the type checking to ensure that there are no compilation errors. If the first argument is null, the tokens from the newly inferred token back to the start of the sequence will all be merged. Figure \ref{synthesizerexample} gives a concrete idea about the whole process.
 
 The internal code completion in eclipse could infer the specifications based on literals. This functionality is integrated into PCC. For example, the internal code completion could translate $String$ to $java.lang.String$ or translate $a.subStr$ to $a.substring(int\ beginIndex)$.
 
@@ -232,9 +232,10 @@ The internal code completion in eclipse could infer the specifications based on 
 \\\begin{figure}
   \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[width=0.48\textwidth]{}\\
-  \caption{Synthesize Process Example}\label{synthesizerexample}
+  \includegraphics[width=0.4\textwidth]{pics/synthesizeexample.png}\\
+  \caption{One Sequence Synthesis Example}\label{synthesizerexample}
 \end{figure}
+\vspace{-0.4cm}
 
 \section{Implementation}
 
